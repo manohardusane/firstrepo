@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>aliensaretheree — builder / Hux</title>
+<meta name="description" content="Portfolio of a builder working on Hux Agent Runtime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f0e9;--ink:#11110f;--muted:#77736b;--line:#d8d2c8;--accent:#b95d3f;--white:#fffdfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}
+.nav{position:fixed;z-index:30;top:0;left:0;right:0;height:74px;padding:0 38px;display:flex;align-items:center;justify-content:space-between;color:#fff;mix-blend-mode:difference}.brand{font:700 16px "Space Grotesk";letter-spacing:-.03em}.brand span{color:#fff}.navlinks{display:flex;gap:28px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.navlinks a{opacity:.75}.navlinks a:hover{opacity:1}
+.hero{height:100svh;min-height:650px;position:relative;background:#181715;overflow:hidden;color:#fff}.hero-img{position:absolute;inset:0;background-image:linear-gradient(90deg,#000b 0%,#0002 50%,#0004),linear-gradient(0deg,#0009 0%,transparent 40%),url("https://d2pn8kiwq2w21t.cloudfront.net/original_images/PIA26753.png");background-size:cover;background-position:center;filter:saturate(.82)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0007,transparent 22%,transparent 70%,#0008);pointer-events:none}
+.hero-content{position:absolute;z-index:2;left:7vw;bottom:11vh;max-width:850px}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px;opacity:.72}.hero h1{font:700 clamp(64px,10vw,148px)/.82 "Space Grotesk";letter-spacing:-.075em;margin:0;max-width:900px}.hero h1 span{display:block}.hero h1 .accent{color:#f0a17e}.hero-sub{margin-top:28px;font-size:15px;line-height:1.7;max-width:520px;color:#eee9df}.scroll{position:absolute;z-index:3;bottom:32px;right:38px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;writing-mode:vertical-rl;opacity:.7}
+.section{padding:125px 7vw}.inner{max-width:1200px;margin:auto}.intro{display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:end}.intro h2,.work h2{font:600 clamp(42px,6vw,84px)/.94 "Space Grotesk";letter-spacing:-.065em;margin:0}.intro-copy{font-size:18px;line-height:1.8;color:var(--muted);max-width:520px}.rule{height:1px;background:var(--line);margin:38px 0}
+.project{margin-top:60px;display:grid;grid-template-columns:1.3fr .7fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}.project-image{min-height:500px;background:#171615;position:relative;overflow:hidden}.project-image:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#b95d3f 0%,transparent 42%),radial-gradient(circle at 72% 30%,#fff1 0 1px,transparent 2px);opacity:.45}.project-image:after{content:"HUX";position:absolute;right:28px;bottom:15px;color:#fff2;font:700 170px/.8 "Space Grotesk";letter-spacing:-.1em}.terminal{position:absolute;left:9%;top:14%;width:82%;border:1px solid #fff2;background:#111c;border-radius:2px;padding:24px;color:#e8e1d6;font:12px/2.05 monospace;backdrop-filter:blur(5px)}.terminal .dim{color:#777}.terminal .orange{color:#e99b79}.terminal .green{color:#b5c99e}.terminal .top{display:flex;gap:6px;margin-bottom:18px}.terminal .dot{width:6px;height:6px;border-radius:50%;background:#777}
+.project-info{padding:44px 42px;display:flex;flex-direction:column;justify-content:space-between}.project-no{font:11px monospace;color:var(--muted)}.project-info h3{font:600 43px "Space Grotesk";letter-spacing:-.055em;margin:60px 0 16px}.project-info p{color:var(--muted);line-height:1.8;font-size:15px}.meta{border-top:1px solid var(--line);padding-top:18px;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.meta small{display:block;color:var(--muted);font-size:10px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:5px}.meta b{font-size:13px;font-weight:500}
+.mission{background:#11110f;color:#f6f2eb}.mission .eyebrow{color:#f0a17e}.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw;align-items:center}.mission h2{font:600 clamp(55px,8vw,110px)/.86 "Space Grotesk";letter-spacing:-.075em;margin:0}.mission h2 span{color:#f0a17e}.mission-copy{font-size:17px;line-height:1.85;color:#a9a49a}.mission-copy strong{color:#f3efe8;font-weight:500}.coordinates{margin-top:45px;border-top:1px solid #ffffff1f;padding-top:20px;display:grid;grid-template-columns:1fr 1fr}.coordinates small{color:#77736b;font-size:9px;text-transform:uppercase;letter-spacing:.16em}.coordinates b{display:block;font:16px monospace;margin-top:6px}
+.contact{padding-bottom:80px}.contact-box{border-top:1px solid var(--ink);padding-top:30px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.contact h2{font:600 clamp(45px,7vw,90px)/.9 "Space Grotesk";letter-spacing:-.07em;margin:0}.contact a{font:11px monospace;text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--ink);padding-bottom:8px}
+footer{padding:24px 7vw 35px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+@media(max-width:800px){.nav{padding:0 20px}.navlinks{display:none}.hero-content{left:22px;right:22px;bottom:80px}.hero h1{font-size:62px}.section{padding:85px 22px}.intro,.mission-grid,.project{grid-template-columns:1fr}.intro-copy{margin-top:30px}.project-image{min-height:360px}.project-info{padding:32px 24px;min-height:440px}.project-info h3{margin:45px 0 12px}.mission-grid{gap:50px}.contact-box{display:block}.contact-box a{display:inline-block;margin-top:35px}footer{padding-left:22px;padding-right:22px;display:block}footer span{display:block;margin-top:10px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#">ALIENSARETHEREE</a>
+  <div class="navlinks"><a href="#work">Work</a><a href="#mission">Mission</a><a href="#contact">Contact</a><a href="https://x.com/aliensaretheree" target="_blank" rel="noreferrer">X ↗</a></div>
+</nav>
+
+<header class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Independent builder / software / agents</div>
+    <h1><span>Build for</span><span>the <span class="accent">next</span> world.</span></h1>
+    <p class="hero-sub">I build software at the edge of what computers can do — currently working on Hux Agent Runtime. I want to go to Mars someday.</p>
+  </div>
+  <div class="scroll">Scroll to explore ↓</div>
+</header>
+
+<section class="section">
+ <div class="inner intro">
+   <div><div class="eyebrow">01 — Approach</div><h2>Quietly obsessed with useful systems.</h2></div>
+   <div><p class="intro-copy">I care about software that earns its complexity. Systems that are fast, understandable and capable of doing real work — especially when agents, tools and humans have to operate together.</p></div>
+ </div>
+</section>
+
+<section id="work" class="section work" style="padding-top:20px">
+ <div class="inner">
+   <div class="eyebrow">02 — Selected work</div>
+   <h2>Current mission.</h2>
+   <article class="project">
+     <div class="project-image">
+       <div class="terminal">
+         <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+         <div><span class="dim">$</span> hux run mission</div>
+         <div><span class="dim">›</span> initialize <span class="orange">agent</span></div>
+         <div><span class="dim">›</span> load tools <span class="green">ready</span></div>
+         <div><span class="dim">›</span> restore state <span class="green">ready</span></div>
+         <div><span class="dim">›</span> execute plan <span class="orange">running</span></div>
+         <div><span class="dim">›</span> destination <span class="orange">unknown</span></div>
+       </div>
+     </div>
+     <div class="project-info">
+       <div>
+         <div class="project-no">01 / HUX</div>
+         <h3>Agent runtime, built from the ground up.</h3>
+         <p>Hux is the thing I’m working on now: infrastructure for agents to reason, use tools, maintain state and execute reliably. The goal is not another chatbot. It’s a runtime for software that can act.</p>
+       </div>
+       <div class="meta">
+         <div><small>Focus</small><b>Agents / Runtime</b></div>
+         <div><small>Status</small><b>In development</b></div>
+         <div><small>Interest</small><b>Systems</b></div>
+         <div><small>Next</small><b>More autonomy</b></div>
+       </div>
+     </div>
+   </article>
+ </div>
+</section>
+
+<section id="mission" class="section mission">
+ <div class="inner mission-grid">
+   <div><div class="eyebrow">03 — Long range</div><h2>Earth is<br>not the <span>end.</span></h2></div>
+   <div class="mission-copy">
+     <p>There’s a long-term idea behind all of this: make technology that expands what people can do, then keep pushing the boundary.</p>
+     <p><strong>Somewhere on that boundary is Mars.</strong></p>
+     <div class="coordinates">
+       <div><small>Current position</small><b>EARTH / ONLINE</b></div>
+       <div><small>Destination</small><b>MARS / SOMEDAY</b></div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section id="contact" class="section contact">
+ <div class="inner contact-box">
+   <div><div class="eyebrow">04 — Signal</div><h2>Let’s build<br>something real.</h2></div>
+   <a href="https://x.com/aliensaretheree" target="_blank" rel="noreferrer">X / @aliensaretheree ↗</a>
+ </div>
+</section>
+
+<footer><span>ALIENSARETHEREE — 2026</span><span>Mars image: NASA/JPL-Caltech/ASU/MSSS</span></footer>
+</body>
+</html>
